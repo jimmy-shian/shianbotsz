@@ -98,20 +98,53 @@
   </div>
 </nav>
 
-<center>
-  <hr>
+    <hr>   
+      <div class="container">
+        <div class="col">
+        <div class="btn-group dropend">
+         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            選擇頻道
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/play1/">EBC 東森新聞 51 24 小時直播</a></li>
+            <li><a class="dropdown-item" href="/play2/">CTI中天新聞 24 小時直播</a></li>
+            <li><a class="dropdown-item" href="/play3/">華視新聞HD 24 小時直播</a></li>
+            <li><a class="dropdown-item" href="/play4/">中視新聞台 24 小時直播</a></li>
+            <li><a class="dropdown-item" href="/play5/">公共電視 13頻道 PTS Live</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="col">
+        <center>
+          <h1>華視新聞HD 24 小時直播</h1>
+        </center>		
+        </div>
+    </div>
 
-<h2> 樂透號碼預測 </h2>
-<hr>
-{% for n in lotto %}
-    {{ n }}
-{% endfor %}
-<br>
-{{ lotto }}<br>
-特別號:{{ special }}
+    <center>
+      
+              <iframe width="1020" height="555" src="https://www.youtube.com/embed/-pvROC_MdYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+         <center>
+  	          <br>
+  	          <br>
+              <br>版權沒有 歡迎使用</br>
+              <br>聯絡信箱 : jimmy910824@gmail.com</br>
+              <br>詳情請至官網查詢</br>
+              <hr><br> <br> <br> 
+          </center>
+        
 
-</center>
-<hr>
 
-</body>
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -21,5 +21,15 @@ urlpatterns = [
     path('date/', views.date),
     path('lotto/', views.lotto),
     path('', views.index),
-    path('play/<int:id>/', views.play )
+    path('mom/', views.mom),
+    path('passfirst/', views.passfirst),
+    path('passsecond/', views.passsecond),
+    path('passthird/', views.passthird),
+    path('passfourth/', views.passfourth),
+    path('play/', views.play ),
+    path('play1/', views.play1 ),
+    path('play2/', views.play2 ),
+    path('play3/', views.play3 ),
+    path('play4/', views.play4 ),
+    path('play5/', views.play5 )
 ]
