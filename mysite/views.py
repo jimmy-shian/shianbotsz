@@ -44,10 +44,21 @@ def play5(request):
 
 	return render(request, "play5.html", locals())
 
-
 def mom(request):
 	
 	return render(request, "mom.html", locals())
+
+def index1(request):
+	
+	return render(request, "index1.html", locals())
+
+def index2(request):
+	
+	return render(request, "index2.html", locals())
+
+def index3(request):
+	
+	return render(request, "index3.html", locals())
 
 def passfirst(request):
 	
