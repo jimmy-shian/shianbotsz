@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import random, datetime
 from mysite import models
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
  
 def index(request):
 	posts = models.Post.objects.all()	
@@ -19,6 +23,10 @@ def date(request):
 	now = datetime.datetime.now()
 	#return HttpResponse("現在時刻 : {}".format(now))
 	return render(request, "date.html", locals())
+
+def mail(request):
+
+	return render(request, "mail.html", locals())
 
 def play(request):
 
@@ -75,3 +83,4 @@ def passfourth(request):
 def passthird(request):
 	
 	return render(request, "passthird.html", locals())
+
