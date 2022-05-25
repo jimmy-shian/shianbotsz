@@ -1,3 +1,33 @@
+
+if (document.referrer === ''){ 
+    document.open();
+    document.write('<P>非法瀏覽當前頁面,<span id="second" >3</span>秒鐘之後跳轉  </p>');
+    document.close();
+} 
+
+
+<script type="text/javascript">    
+   var num = document.getElementById("second").innerHTML;  
+   function count()  
+    {  
+        num--;  
+        document.getElementById("second").innerHTML=num;  
+        if(num==0)  
+        {  
+            location.assign("#");  
+        }
+        if(num<0)  
+        {  
+            location.assign("/passfirst");  
+       }    
+   }  
+    setInterval("count()",1000);  
+function back()  
+   {  
+       window.history.back();  
+  }  
+ </script>   
+
 <!doctype html>
 <html lang="en">
   <head>

@@ -98,6 +98,24 @@
  <h1>
   <div style='font-family:微軟正黑體';>現在時刻 :{{ now }}</div>
  </h1>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+  <table class='table table-striped'>
+    <tr><td>標題</td><td>影片ID</td><td>張貼日期時間</td></tr>
+  {% for post in posts %}
+    <tr>
+    <td><a href='https://www.youtube.com/watch?v={{ post.vid }}'>{{ post.title }}</a></td>
+    <td><a href='/play/{{ post.id }}/'>{{ post.vid }}</a></td>
+    <td>{{ post.pub_date }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+
+
 </center>
 <hr>
     <!-- Optional JavaScript; choose one of the two! -->

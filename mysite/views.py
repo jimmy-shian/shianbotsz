@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import random, datetime
 from mysite import models
+from django.template import RequestContext
+from http import HTTPStatus
+
+#from flask import Flask, redirect, url_for, render_template,request
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -19,6 +23,8 @@ def lotto(request):
 	return render(request, "lotto.html", locals())
  
 def date(request):
+
+	posts = models.Post.objects.all()	
 
 	now = datetime.datetime.now()
 	#return HttpResponse("現在時刻 : {}".format(now))
@@ -69,12 +75,29 @@ def index3(request):
 	return render(request, "index3.html", locals())
 
 def passfirst(request):
-	
+
 	return render(request, "passfirst.html", locals())
 
 def passsecond(request):
-	
-	return render(request, "passsecond.html", locals())
+
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        #form = NameForm(request.POST)
+        # check whether it's valid:
+        #if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+        password = request.POST["inputPassword2"]
+        #sss = request.POST.get('inputPassword2')
+    if password == '0224':
+        return render(request,"mom.html",locals())
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        #form = NameForm()
+       # return render(request,"lotto.html",locals())
+    	return render(request,"passfirst.html",locals()) 
 
 def passfourth(request):
 	
