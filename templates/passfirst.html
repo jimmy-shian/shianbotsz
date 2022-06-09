@@ -99,8 +99,11 @@
 
 <div class="position-absolute top-30% start-50 translate-middle-x">
   <center>
-    <form class="row g-3" action="/passsecond/" method="POST">
+    <form class="row g-3" method="POST" action="/mom/"> <!--action="/passsecond/"-->
       <br/>{% csrf_token %}<br/>
+      {% if error %}
+      <p style='color:red;'>{{error}}</p>
+      {% endif %}
       <div class="col-auto" >
           <input type="password" class="form-control" name="inputPassword2" placeholder="輸入密碼">
       </div>
